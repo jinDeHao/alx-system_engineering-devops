@@ -1,2 +1,2 @@
 #!/bin/bash
-alias PATH="OLDPWD"
+alias PATH="$PATH \:\/action"
