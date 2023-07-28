@@ -1,2 +1,3 @@
-#!/bin/bash
-ps | pgrep bash
+#!/usr/bin/env bash
+PID=$(echo $$)
+echo $PID
