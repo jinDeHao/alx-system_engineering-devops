@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#infinity loop kill
+filename = $(4-to_infinity_and_beyond)
+kill "$(pgrep -f $filename)"
