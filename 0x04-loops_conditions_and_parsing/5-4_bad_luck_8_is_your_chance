@@ -5,12 +5,10 @@ while true; do
     if (( i == 7 )); 
     then
         echo "good luck"
-    else 
-        if (( i == 3 )); then
-            echo "bad luck"
-        else
-            echo "Best School"
-        fi
+    elif (( i == 3 )); then
+        echo "bad luck"
+    else
+        echo "Best School"
     fi
     if (( i == 9)); then
         break
