@@ -7,6 +7,9 @@ if [ -e "$file" ]; then
     echo "$file file exists"
     if [ "$cmd" == "$Empty" ]; then
         echo "$file file is empty"
+        if stat -c "%F" "$file" | grep -q "regular file"; then
+            echo "$file is a regular file"
+        fi
     else
         echo "$file file is not empty"
         if stat -c "%F" "$file" | grep -q "regular file"; then
