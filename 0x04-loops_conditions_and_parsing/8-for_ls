@@ -2,5 +2,5 @@
 #displays The content of the current directory
 Cdirlist=$(ls)
 for list in $Cdirlist; do
-    echo $list | cut -d '-' -f 2
+    echo "$list" | cut -d '-' -f 2
 done
