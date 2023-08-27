@@ -1,5 +1,6 @@
+# Web infrastructure design
 
-# First task
+## First task
     1 server
     1 web server (Nginx)
     1 application server
@@ -9,7 +10,7 @@
 **link :**
     https://imgur.com/yRt2d1s
 
-# Second task
+## Second task
     2 servers
     1 web server (Nginx)
     1 application server
@@ -19,9 +20,16 @@
 **link :**
     https://imgur.com/zGQaEqb
 
-# Third task
+## Third task
     3 firewalls
     1 SSL certificate to serve www.foobar.com over HTTPS
     3 monitoring clients (data collector for Sumologic or other monitoring services)
 **link :**
     https://imgur.com/oI0ZXfD
+
+## Fourth Task
+    1 server
+    1 load-balancer (HAproxy) configured as cluster with the other one
+    Split components (web server, application server, database) with their own server
+**link :**
+    
