@@ -20,11 +20,8 @@
     https://imgur.com/zGQaEqb
 
 # Third task
-    2 servers
-    1 web server (Nginx)
-    1 application server
-    1 load-balancer (HAproxy)
-    1 set of application files (your code base)
-    1 database (MySQL)
+    3 firewalls
+    1 SSL certificate to serve www.foobar.com over HTTPS
+    3 monitoring clients (data collector for Sumologic or other monitoring services)
 **link :**
     https://imgur.com/oI0ZXfD
