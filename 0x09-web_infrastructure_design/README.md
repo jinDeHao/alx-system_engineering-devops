@@ -32,4 +32,4 @@
     1 load-balancer (HAproxy) configured as cluster with the other one
     Split components (web server, application server, database) with their own server
 **link :**
-    
+    https://imgur.com/ttquXB1
