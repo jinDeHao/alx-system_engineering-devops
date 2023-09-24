@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-#connecting to a server using private key
+# connecting to a server using private key
 user="ubuntu"
 privateKeyPath="~/.ssh/school"
-ip="8.8.8.8"
+ip="52.86.89.214"
 
-ssh -i $privateKeyPath $user@$ip
+ssh -i "$privateKeyPath" "$user@$ip"
