@@ -5,3 +5,5 @@ privateKeyPath="~/.ssh/school"
 ip="52.86.89.214"
 
 ssh -i "$privateKeyPath" $user@$ip
+
+# done
