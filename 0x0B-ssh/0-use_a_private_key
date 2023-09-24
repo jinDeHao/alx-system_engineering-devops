@@ -2,6 +2,6 @@
 #connecting to a server using private key
 user="ubuntu"
 privateKeyPath="~/.ssh/school"
-ip="52.86.89.214"
+ip="8.8.8.8"
 
 ssh -i $privateKeyPath $user@$ip
