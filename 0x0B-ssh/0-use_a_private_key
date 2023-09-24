@@ -1,4 +1,5 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
+#connecting to a server using private key
 user="ubuntu"
 privateKeyPath="~/.ssh/school"
 ip="52.86.89.214"
