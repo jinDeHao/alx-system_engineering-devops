@@ -4,7 +4,6 @@ package { 'nginx':
 }
 
 # website index file
-Nginx config
 file { '/var/www/html/index.html':
   content => 'Hello World!',
 }
@@ -20,13 +19,6 @@ file_line { 'redirect_me':
             # Am omar but you can call me dehao
         }',
 }
-# file_line { 'redirect_me':
-#   ensure => 'present',
-#   path   => '/etc/nginx/sites-available/default',
-#   after  => 'listen 80 default_server;',
-#   line   => 'rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;',
-# }
-
 
 # stop nginx
 exec { 'stop service':
