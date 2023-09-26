@@ -24,6 +24,6 @@ file_line { 'redirect_me':
 
 # run nginx
 exec { 'restart service':
-  command => 'service nginx start',
+  command => 'sudo service nginx restart',
   path    => ['/bin', '/usr/bin'],
 }
