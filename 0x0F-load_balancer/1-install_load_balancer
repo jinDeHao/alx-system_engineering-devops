@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+sudo apt -y update
+sudo apt -y upgrade
+
+sudo add-apt-repository ppa:vbernat/haproxy-2.4 -y
+sudo apt install haproxy=2.4.\*
+
+sudo echo '
+defaults
+    log global
+    mode http
+    option httplog
+    option dontlognull
+    timeout connect 5000
+    timeout client 50000
+    timeout server 50000
+
+frontend myfrontend
+    bind *:80
+    default_backend mybackend
+
+backend mybackend
+    mode http
+    balance roundrobin
+    server 378410-web-01 52.86.89.214:80 check
+    server 378410-web-02 52.3.254.204:80 check
+' >> /etc/haproxy/haproxy.cfg
+
+sudo service haproxy restart
