@@ -4,10 +4,9 @@
 sudo apt -y update
 sudo apt -y upgrade
 
-sudo add-apt-repository ppa:vbernat/haproxy-2.4 -y
 sudo apt -y install haproxy
 
-sudo echo -e 'frontend dehao.tech\n\tbind *:80\n\tdefault_backend web_servers\n\nbackend web_servers\n\tmode http\n\tbalance roundrobin\n\tserver 378410-web-01 52.86.89.214:80 check\n\tserver 378410-web-02 52.3.254.204:80 check\n\x1A' >> /etc/haproxy/haproxy.cfg
+sudo echo -e 'frontend dehao.tech\n\tbind *:80\n\tdefault_backend web_servers\n\nbackend web_servers\n\tbalance roundrobin\n\tserver 378410-web-01 52.86.89.214:80 check\n\tserver 378410-web-02 52.3.254.204:80 check\n' >> /etc/haproxy/haproxy.cfg
 sudo sed -i "9i ENABLED=1" /etc/default/haproxy
 
 sudo service haproxy restart
