@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+# recreate a symboliclink to nginx configuration active
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+sudo service nginx restart
