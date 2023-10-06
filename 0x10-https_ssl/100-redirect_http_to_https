@@ -1,0 +1,10 @@
+frontend dehao-tech
+        bind *:80
+        bind *:443 ssl crt /etc/haproxy/certs/www.dehao.tech.pem
+        redirect scheme https code 301 if !{ ssl_fc }
+        default_backend web_servers
+
+backend web_servers
+        balance roundrobin
+        server 378410-web-01 52.86.89.214:80 check
+        server 378410-web-02 52.3.254.204:80 check
