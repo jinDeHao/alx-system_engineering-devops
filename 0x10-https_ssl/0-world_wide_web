@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+# bash script displays subdomains status
+
+getStatus() {
+    dig "$1" | awk -v subdomain="$2" -F" " '/ANSWER SECTION:/ { getline; print "The subdomain " subdomain " is a " $4 " record and points to " $5 }'
+}
+
+if (($# == 2)); then
+    getStatus "$2.$1" "$2"
+else
+    for subdomain in www lb-01 web-01 web-02; do
+        getStatus "${subdomain}.$1" "$subdomain"
+    done
+fi
