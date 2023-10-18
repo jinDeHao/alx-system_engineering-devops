@@ -1,0 +1,11 @@
+!includedir /etc/mysql/conf.d/
+!includedir /etc/mysql/mysql.conf.d/
+[mysqld]server-id = 2  
+relay-log = /var/lib/mysql/mysql-relay-bin
+log-bin = mysql-bin
+pid-file = /var/run/mysqld/mysqld.pid
+socket = /var/run/mysqld/mysqld.sock
+datadir = /var/lib/mysql
+log-error = /var/lib/mysql/error.log
+binlog-do-db = tyrell_corp
+bind-address = localhost
