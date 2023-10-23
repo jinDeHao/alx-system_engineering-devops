@@ -25,4 +25,4 @@ https://jsonplaceholder.typicode.com/users/{}/todos\
 
     for i in todo_list:
         if i.get("completed"):
-            print("\t{}".format(i.get("title")))
+            print("\t {}".format(i.get("title")))
