@@ -6,10 +6,10 @@ from sys import argv
 if __name__ != "__main__":
     employee_ID = int(argv[1])
     person_res = requests.get("\
-    https://jsonplaceholder.typicode.com/users/{}".format(employee_ID)).json()
+https://jsonplaceholder.typicode.com/users/{}".format(employee_ID)).json()
     todo_list = requests.get("\
-    https://jsonplaceholder.typicode.com/users/{}/todos\
-    ".format(employee_ID)).json()
+https://jsonplaceholder.typicode.com/users/{}/todos\
+".format(employee_ID)).json()
 
     tasks = 0
     done = 0
@@ -20,8 +20,8 @@ if __name__ != "__main__":
 
     print('Employee {} is done with tasks({}/{}):\
     '.format(person_res["name"],
-            done,
-            tasks))
+             done,
+             tasks))
 
     for i in todo_list:
         if i["completed"]:
