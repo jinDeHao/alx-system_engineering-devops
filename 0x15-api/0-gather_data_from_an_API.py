@@ -3,7 +3,7 @@
 
 import requests
 from sys import argv
-if __name__ != "__main__":
+if __name__ == "__main__":
     employee_ID = int(argv[1])
     person_res = requests.get("\
 https://jsonplaceholder.typicode.com/users/{}".format(employee_ID)).json()
@@ -14,15 +14,15 @@ https://jsonplaceholder.typicode.com/users/{}/todos\
     tasks = 0
     done = 0
     for i in todo_list:
-        if i["completed"]:
+        if i.get("completed"):
             done += 1
         tasks += 1
 
     print('Employee {} is done with tasks({}/{}):\
-    '.format(person_res["name"],
+    '.format(person_res.get("name"),
              done,
              tasks))
 
     for i in todo_list:
-        if i["completed"]:
-            print("\t{}".format(i["title"]))
+        if i.get("completed"):
+            print("\t{}".format(i.get("title")))
