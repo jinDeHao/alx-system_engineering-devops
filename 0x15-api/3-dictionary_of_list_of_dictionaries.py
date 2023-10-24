@@ -15,7 +15,8 @@ https://jsonplaceholder.typicode.com/users/").json()
 https://jsonplaceholder.typicode.com/users/{}/todos\
 ".format(person["id"])).json()
             disctionary = {}
-            disctionary["{}".format(person["id"])] = []
+            if "{}".format(person["id"]) not in disctionary:
+                disctionary["{}".format(person["id"])] = []
             user = disctionary["{}".format(person["id"])]
             for i in todo_list:
                 user.append({"username": person["username"],
