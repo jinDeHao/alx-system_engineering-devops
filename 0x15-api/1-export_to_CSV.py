@@ -16,4 +16,6 @@ https://jsonplaceholder.typicode.com/users/{}/todos\
     with open('{}.csv'.format(employee_ID), 'w') as file:
         writer = csv.writer(file)
         for i in todo_list:
-            writer.writerow([employee_ID, person["username"], i["completed"], i["title"]])
+            writer.writerow([employee_ID, person["username"],
+                             i["completed"],
+                             i["title"]])
