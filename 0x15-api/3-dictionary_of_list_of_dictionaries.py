@@ -10,11 +10,11 @@ if __name__ == "__main__":
 https://jsonplaceholder.typicode.com/users/").json()
 
     with open('todo_all_employees.json', 'w') as file:
+        disctionary = {}
         for person in persons:
             todo_list = requests.get("\
 https://jsonplaceholder.typicode.com/users/{}/todos\
 ".format(person["id"])).json()
-            disctionary = {}
             if "{}".format(person["id"]) not in disctionary:
                 disctionary["{}".format(person["id"])] = []
             user = disctionary["{}".format(person["id"])]
