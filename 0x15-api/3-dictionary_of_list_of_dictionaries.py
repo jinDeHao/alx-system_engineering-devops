@@ -22,4 +22,4 @@ https://jsonplaceholder.typicode.com/users/{}/todos\
                 user.append({"username": person["username"],
                              "task": i["title"],
                             "completed": i["completed"]})
-            json.dump(disctionary, file)
+        json.dump(disctionary, file)
