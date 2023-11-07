@@ -17,6 +17,3 @@ def number_of_subscribers(subreddit):
             print(data["children"][i]['data']['title'])
         return
     print(None)
-
-
-number_of_subscribers(1234)
