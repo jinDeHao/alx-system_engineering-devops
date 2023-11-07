@@ -3,7 +3,7 @@
 import requests
 
 
-def number_of_subscribers(subreddit):
+def top_ten(subreddit):
     """return subscribers"""
     if not subreddit or not isinstance(subreddit, str):
         print(None)
