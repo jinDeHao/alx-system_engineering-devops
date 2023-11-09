@@ -1,5 +1,0 @@
-#!/bin/bash
-git add "$@"
-read -p 'commit message: ' m
-git commit -m "$m"
-git push
